@@ -1,0 +1,16 @@
+
+.carName {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+.carDescription {
+    margin: 5px;
+    padding: 5px;
+    background: linear-gradient(#e8cd2c,#2aabd2,#1b6d85);
+    display: flex;
+}
+
+.carDescription .carName, .carColor {
+    border: 4px solid darkorchid;
+    padding: 5px;
+}

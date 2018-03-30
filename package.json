@@ -1,0 +1,9 @@
+{
+  "name": "aqua_note",
+  "version": "0.0.1",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-core": "latest"
+  }
+}

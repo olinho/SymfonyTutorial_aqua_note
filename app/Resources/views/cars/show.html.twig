@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/car-style.css') }}"
+{% endblock %}
+
+{% block body %}
+    <h1 class="page-header text-center">List of available cars</h1>
+
+    <div id="js-cars-wrapper"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <script type="text/babel" src="{{ asset('js/cars.react.js') }}"></script>
+
+    <script type="text/babel">
+        let carsUrl = '{{ path('cars_show_cars') }}';
+
+        ReactDOM.render(
+            <CarSection url={carsUrl} />,
+            document.getElementById('js-cars-wrapper')
+        );
+    </script>
+
+
+{% endblock %}
